@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Colorlib Listed Directory Template</title>
+    <title>Uni-Info</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
     <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
     
@@ -23,7 +25,7 @@
      
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Listed</a>
+          <a class="navbar-brand" href="index.html">Uni-Info</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -31,25 +33,13 @@
           <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
             <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="destination.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destination</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown04">
-                  <a class="dropdown-item" href="destination.html">Places</a>
-                  <a class="dropdown-item" href="destination.html">Hotels</a>
-                  <a class="dropdown-item" href="destination.html">Restaurants</a>
-                </div>
-
+                <a class="nav-link active" href="index.html">Ballina</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link" href="about.html">Rreth Nesh</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="contact.html">Kontakti</a>
               </li>
             </ul>
             
@@ -59,20 +49,44 @@
     </header>
     <!-- END header -->
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.webp);">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
 
             <div class="mb-5 element-animate">
-              <h1>Find your perfect place.</h1>
-              <p>Discover &amp; connect with great places around the world.</p>
+              <h1>Find Lorem ipsum.</h1>
+              <p>Lorem ipsum discover and connect lorem lorem..</p>
             </div>
 
-            <form class="form-inline element-animate" id="search-form">
-              <label for="s" class="sr-only">Location</label>
-              <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Search Location with Google Search API" onFocus="geolocate()">
-              <button type="submit" class="btn btn-primary">Search</button>
+            <form class="element-animate" id="search-form">
+
+              <div class="form-row">
+                <div class="col-5">
+                
+                  <label for="s" class="sr-only">Location</label>
+                  <select id="universities" class="form-control search-input">
+                    <option value="" disabled selected hidden>Zgjedhe drejtimin</option>
+                    <option value="saab">Shkenca Kompjuterike</option>
+                    <option value="mercedes">Ekonomi</option>
+                  </select>
+                </div>
+                
+                <div class="col-5">
+                <select id="cities" class="form-control  search-input">
+                  <option value="1" disabled selected hidden>Qyteti (Opsional)</option>
+                  <option value="saab">Gjakova</option>
+                  <option value="mercedes">Prishtina</option>
+                  <option value="audi">Peja</option>
+                </select>
+                </div>
+
+                <div class="col-2">             
+                
+                <button type="submit" class="btn btn-primary">Kerko</button>
+                </div>
+               
+              </div>
             </form>
 
           </div>
@@ -91,102 +105,325 @@
     <!-- END section -->
     
     <section class="site-section">
-      <div class="container">
+      <div class="listing-section content-area">
+    <div class="container">
         <div class="row">
-          <div class="col-md-4 pr-5">
-            
-            <h2 class="mb-3">More Featured <br> Destinations</h2>
-            <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-            
-            <div class="mb-3">
-              <a href="#" class="btn btn-primary custom-prev mr-2 mb-2"><span class="ion-android-arrow-back"></span></a> 
-              <a href="#" class="btn btn-primary custom-next mr-2 mb-2"><span class="ion-android-arrow-forward"></span></a>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-12 slider-wrap">
-                <div class="owl-carousel owl-theme no-nav js-carousel-1">
-                  
-                  <a href="#" class="img-bg" style="background-image: url('images/img_2.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Stockton Beach, Austrlia</h2>
-                      <p>Visit This Place</p>
+            <div class="col-lg-12 col-md-12 col-xs-12">
+                <!-- Option bar start -->
+                <!-- <div class="option-bar d-none d-xl-block d-lg-block d-md-block d-sm-block">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-sm-7">
+                            <div class="sorting-options2">
+                                <span class="sort">Sort by:</span>
+                                <div class="dropdown bootstrap-select search-fields"><select class="selectpicker search-fields" name="default-order" tabindex="-98">
+                                    <option>Default Order</option>
+                                    <option>Price High to Low</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Newest listing</option>
+                                    <option>Oldest listing</option>
+                                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="button" title="Default Order"><div class="filter-option"><div class="filter-option-inner">Default Order</div></div>&nbsp;<span class="bs-caret"><span class="caret"></span></span></button><div class="dropdown-menu " role="combobox"><div class="inner show" role="listbox" aria-expanded="false" tabindex="-1"><ul class="dropdown-menu inner show"></ul></div></div></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-sm-5">
+                            <div class="sorting-options">
+                                <a href="list-fullwidth.html" class="change-view-btn"><i class="fa fa-th-list"></i></a>
+                                <a href="grid-fullwidth.html" class="change-view-btn active-view-btn"><i class="fa fa-th-large"></i></a>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg" style="background-image: url('images/img_1.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Trogir, Croatia</h2>
-                      <p>Visit This Place</p>
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Restourant</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-cook"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">The Green Restourant</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" style="background-image: url('images/img_3.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Desert, Morocco</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Shops</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-shop"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Shop In City</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg" style="background-image: url('images/img_2.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Stockton Beach, Austrlia</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Gym</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-gym"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Gym In Fitnees</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg" style="background-image: url('images/img_1.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Trogir, Croatia</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Eat &amp; Drink</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-cook"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Best Place For Drink </a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" style="background-image: url('images/img_3.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Desert, Morocco</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Event</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-monitor"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">My Parsonal Event</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg" style="background-image: url('images/img_2.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Stockton Beach, Austrlia</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Hotels</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-hotel"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">The Hotel Alpha</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg" style="background-image: url('images/img_1.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Trogir, Croatia</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Gym</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-gym"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Gym In Fitnees</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-                  <a href="#" class="img-bg last" style="background-image: url('images/img_3.jpg')">
-                    <div class="text">
-                      <span class="icon ion-ios-location"></span>
-                      <h2>Desert, Morocco</h2>
-                      <p>Visit This Place</p>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Eat &amp; Drink</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-cook"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Best Place For Drink </a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
                     </div>
-                  </a>
-
-
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="listing-item-box">
+                            <div class="listing-thumbnail">
+                                <a href="listing-single.html" class="listing-photo">
+                                    <div class="tag">Shops</div>
+                                    <div class="location">
+                                        <i class="flaticon-pin"></i>123 Kathal St. Tampa City,
+                                    </div>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>( 7 Reviews )</span>
+                                    </div>
+                                    <img class="d-block w-100" src="images/img_5.jpg" alt="listing-photo">
+                                </a>
+                            </div>
+                            <div class="detail">
+                                <a class="icon">
+                                    <i class="flaticon-shop"></i>
+                                </a>
+                                <h3 class="title">
+                                    <a href="listing-single.html">Shop In City</a>
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- Page navigation start -->
+                <div class="pagination-box text-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#">Prev</a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="grid-sidebar.html">2</a></li>
+                            <li class="page-item"><a class="page-link" href="list-sidebar.html">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="list-sidebar.html">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
     </section>
     <!-- END section -->
    
