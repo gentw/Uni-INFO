@@ -1,0 +1,45 @@
+{
+  "name": "uni-info.org",
+  "version": "1.0.0",
+  "description": "uni-info.org advanced search for facultities based on direction and city.",
+  "main": "main.js",
+  "scripts": {
+    "serve": "webpack-dev-server --mode development --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gentw/Uni-INFO.git"
+  },
+  "author": "Gent Nuka",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.2",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.2",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.1.6",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6",
+    "vue-icon": "^2.1.1",
+    "font-awesome": "^4.7.0",
+    "pretty-checkbox": "^3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/gentw/Uni-INFO/issues"
+  },
+  "homepage": "https://github.com/gentw/Uni-INFO#readme"
+}
