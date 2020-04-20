@@ -13,35 +13,55 @@ export default {
 			changeBgSize: false,
 			showLoading: false,
 			isClicked: false,
-			imageSrc: "'http://s1.swisspour.net/img/manjakos/'",
+			error: "",
+			searchResultsTxt: "",
+			imageSrc: "'https://cms.uni-info.org/img/manjakos/'",
 			facultities: [],
 			facultyKey: 0,
-			directions: [
-				{
-					text: "Shkenca Kompjuterike",
-					value: "Computer Science"
-				},
-				{
-					text: "Ekonomi",
-					value: "Economy"
-				},
-			],
-			cities: [
-				{
-					text: "Prishtina"
-				},
-				{
-					text: "Gjakova"
-				},
-				{
-					text: "Peja"
-				},
-
-			]
+			directions: [],
+			cities: []
 			}
 		},
 
 		methods: {
+			fetchSearchFields: function() {
+				let directionsRequest = {
+						
+					"global": [
+						{					
+							"limit": "all",
+							"type": "drejtimet"
+						}
+					]
+				}
+
+				this.$http.post('https://cms.uni-info.org/websites/api/global', directionsRequest).then((response) => {
+					
+					
+					this.directions = response.body.global.many[0].drejtimet;
+					
+				});
+
+
+				let citiesRequest = {
+						
+					"global": [
+						{					
+							"limit": "all",
+							"type": "qyteti"
+						}
+					]
+				}
+
+				this.$http.post('https://cms.uni-info.org/websites/api/global', citiesRequest).then((response) => {		
+
+					
+					this.cities = response.body.global.many[0].qyteti;
+					
+				});
+			},
+
+
 			searchBtn: function(e) {
 				e.preventDefault();
 
@@ -62,15 +82,25 @@ export default {
 				this.showLoading = true;
 
 				setTimeout(function() {
+					
 					_this.showLoading = false;
 					_this.isClicked = true;
-				_this.$http.post('http://s1.swisspour.net/websites/api/universities', object).then((response) => {
+					
+					_this.searchResultsMessage();
+
+				_this.$http.post('https://cms.uni-info.org/websites/api/universities', object).then((response) => {
+					
+					
 					
 
+					if(_this.selectedDirection.length <= 0 && _this.selectedCity.length <= 0) {
+						_this.facultities = response.body.global[0];
+					} else {
+						_this.facultities = response.body.global;
+					}
 
-					
-					_this.facultities = response.body.global;
-					
+					console.log(response.body.global);
+					_this.checkError();
 					
 					if(response.body.global.length <= 0)
 						_this.changeBgSize = false;
@@ -85,11 +115,35 @@ export default {
 			enableButton: function(){
 				if(this.selectedDirection || this.selectedCity)
 					this.isClicked = false;
+			},
+
+			searchResultsMessage: function() {
+
+
+				if(this.selectedDirection.length > 1) {
+					this.searchResultsTxt = "Lista e universiteteve te drejtimit " + this.selectedDirection + (this.selectedCity == "" ? " ne te gjitha qytetet." : " ne "+this.selectedCity+"."); 
+				} else if(this.selectedDirection.length <= 0 && this.selectedCity.length <= 0) {
+					this.searchResultsTxt = "Lista e te gjitha universiteteve me te gjitha drejtimet.";
+				} else {
+					this.searchResultsTxt = "Lista e universiteteve me te gjitha drejtimet ne " + this.selectedCity + "."; 
+				}
+
+
+				
+				
+			},
+
+			checkError: function () {
+				if(this.facultities.length <= 0) {
+					this.error = "Na vjen keq, por kerkimi juaj nuk u gjet!";
+				} else {
+					this.error = "";
+				}
 			}
 		},
 
 		mounted() {
-
+			this.fetchSearchFields();
 		}
 
 } 
