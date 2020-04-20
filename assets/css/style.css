@@ -130,8 +130,8 @@ header .navbar.navbar-light .nav-link.active {
 .site-hero {
   background-size: cover;
   background-position: center center;
-  /*min-height: 750px;*/
-  height: 60vh;
+  min-height: 750px;
+  height: 100vh;
 }
 
 .site-hero > .container {
@@ -160,10 +160,16 @@ header .navbar.navbar-light .nav-link.active {
 }
 
 .site-hero .site-hero-inner {
- /* min-height: 750px;
-  height: 100vh;*/
-  height: 60vh;
+  min-height: 750px;
+  height: 100vh;
+  /*height: 60vh;*/
 
+}
+
+.site-hero-active {
+  height: 60vh!important;
+  min-height:0!important;
+  transition: height 0.5s;
 }
 
 .site-hero-innerpage, .site-hero-innerpage .site-hero-inner {

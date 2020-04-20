@@ -8,10 +8,14 @@ export default {
 		
 		data() {
 			return {
-			objectRequest: [],
 			selectedDirection: "",
 			selectedCity: "",
+			changeBgSize: false,
+			showLoading: false,
+			isClicked: false,
+			imageSrc: "'http://s1.swisspour.net/img/manjakos/'",
 			facultities: [],
+			facultyKey: 0,
 			directions: [
 				{
 					text: "Shkenca Kompjuterike",
@@ -52,12 +56,35 @@ export default {
 					]
 				}
 
+				var _this = this;
 
-				this.$http.post('http://s1.swisspour.net/websites/api/universities', object).then((response) => {
-					this.facultities = response.body.global;
+				this.changeBgSize = true;
+				this.showLoading = true;
+
+				setTimeout(function() {
+					_this.showLoading = false;
+					_this.isClicked = true;
+				_this.$http.post('http://s1.swisspour.net/websites/api/universities', object).then((response) => {
+					
+
+
+					
+					_this.facultities = response.body.global;
+					
+					
+					if(response.body.global.length <= 0)
+						_this.changeBgSize = false;
 				});
+				}, 1000);
 
 				
+
+				
+			},
+
+			enableButton: function(){
+				if(this.selectedDirection || this.selectedCity)
+					this.isClicked = false;
 			}
 		},
 

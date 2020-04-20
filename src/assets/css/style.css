@@ -130,8 +130,8 @@ header .navbar.navbar-light .nav-link.active {
 .site-hero {
   background-size: cover;
   background-position: center center;
-  /*min-height: 750px;*/
-  height: 60vh;
+  min-height: 750px;
+  height: 100vh;
 }
 
 .site-hero > .container {
