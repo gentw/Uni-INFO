@@ -43,8 +43,8 @@
                 
                   <label for="s" class="sr-only">Location</label>
                   <select v-model="selectedDirection" id="universities" class="form-control search-input">
-                    <option value="" disabled selected>Zgjedhe drejtimin (Te gjitha)</option>
-                    <option v-on:click="enableButton" v-for="direction in directions" :value="direction.collections.title.en">
+                    <option value="" selected>Zgjedhe drejtimin (Te gjitha)</option>
+                    <option v-for="direction in directions" :value="direction.collections.title.en">
                       {{ direction.collections.title.en  }}
                     </option>
                   </select>
@@ -52,8 +52,8 @@
                 
                 <div class="col-md-5 col-sm-12">
                 <select id="cities" v-model="selectedCity" class="form-control  search-input">
-                  <option value="" disabled selected>Qyteti (Te gjitha)</option>
-                  <option v-on:click="enableButton"  v-for="city in cities" :value="city.collections.title.en">
+                  <option value="" selected>Qyteti (Te gjitha)</option>
+                  <option  v-for="city in cities" :value="city.collections.title.en">
                       {{ city.collections.title.en }}
                     </option>
                 </select>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="detail">
                                 <h3 class="title">
-                                    <a href="#">{{faculty.collections.title.en}}</a>
+                                    <a :href="faculty.collections.web_link.en">{{faculty.collections.title.en}}</a>
                                 </h3>
                                 <p>
                                   <strong>Rektori: </strong>{{faculty.collections.rektori.en}}<br>
@@ -148,7 +148,7 @@
                                   <strong>Email: </strong>{{faculty.collections.email.en}}<br>
                                   <strong>Qyteti: </strong>{{faculty.collections.pagetype_rel_qyteti.en}}<br>
                                   
-
+                                  <strong><a :href="faculty.collections.web_link.en">Linku WEB-it</a></strong>
 
                                 </p>
                             </div>

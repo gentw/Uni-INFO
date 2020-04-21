@@ -84,7 +84,7 @@ export default {
 				setTimeout(function() {
 					
 					_this.showLoading = false;
-					_this.isClicked = true;
+					// _this.isClicked = true;
 					
 					_this.searchResultsMessage();
 
@@ -93,11 +93,7 @@ export default {
 					
 					
 
-					if(_this.selectedDirection.length <= 0 && _this.selectedCity.length <= 0) {
-						_this.facultities = response.body.global[0];
-					} else {
-						_this.facultities = response.body.global;
-					}
+					_this.facultities = response.body.global;
 
 					console.log(response.body.global);
 					_this.checkError();
