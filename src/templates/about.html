@@ -14,8 +14,13 @@
                 <router-link class="nav-link"  to="/">Ballina</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link active"  to="/about">Rreth Nesh</router-link>
-               
+                <router-link class="nav-link active"  to="/about">Rreth Nesh</router-link>               
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link"  to="/contact">Kontakti</router-link>               
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link"  to="/help">Kerko ndihme</router-link>               
               </li>
             </ul>
             
@@ -31,8 +36,8 @@
           <div class="col-md-8 text-center">
 
             <div class="mb-5 ">
-              <h1>About Us</h1>
-              <p>Discover &amp; connect with great places around the world.</p>
+              <h1>{{ aboutInfos.cover_information[0].cover_title.en }}</h1>
+              <p>{{ aboutInfos.cover_information[0].cover_description.en }}</p>
             </div>
 
             
