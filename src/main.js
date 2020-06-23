@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Resource from 'vue-resource'
 import Router from 'vue-router'
-
+import 'bootstrap';
 
 
 import App from './components/App.vue';
