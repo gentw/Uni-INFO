@@ -4,7 +4,7 @@
      
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">Uni-Info</a>
+          <router-link class="navbar-brand" to="/"><img style="max-width: 150px" :src="'https://cms.uni-info.org/img/manjakos/'+home_info[0].logo" class="img-md-fluid"></router-link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,14 +32,14 @@
     </header>
     <!-- END header -->
 
-    <section v-bind:class="{ 'site-hero-active': changeBgSize }" class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(assets/images/background.jpg);">
+    <section v-bind:class="{ 'site-hero-active': changeBgSize }" class="site-hero overlay" data-stellar-background-ratio="0.5" :style="{ backgroundImage: `url(${ 'https://cms.uni-info.org/img/manjakos/' + home_info[0].background})` }">
       <div class="container">
         <div v-bind:class="{ 'site-hero-active': changeBgSize }" class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
 
             <div class="mb-5">
-              <h1>Find Lorem ipsum.</h1>
-              <p>Lorem ipsum discover and connect lorem lorem..</p>
+              <h1>{{ home_info[0].first_title.en}}</h1>
+              <p>{{ home_info[0].second_title.en}}</p>
             </div>
 
             <form id="search-form">

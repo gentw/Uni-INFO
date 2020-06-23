@@ -19,11 +19,39 @@ export default {
 			facultities: [],
 			facultyKey: 0,
 			directions: [],
-			cities: []
+			cities: [],
+			home_info: [],
 			}
 		},
 
 		methods: {
+			ajaxReq: function(pageType) {
+				let ajaxData = [
+					{						
+						"global": [
+							{					
+								"limit": "all",
+								"type": pageType
+							}
+						]
+					}
+				];
+
+				return ajaxData;
+			},
+
+			fetchHomeInfo: function(ajax) {
+				
+
+				this.$http.post('https://cms.uni-info.org/websites/api/global', this.ajaxReq('home_details')[0]).then((response) => {				
+					
+					this.home_info.push(response.body.global.one[0].home_details.collections);
+					
+				});
+				
+
+			},
+
 			fetchSearchFields: function() {
 				let directionsRequest = {
 						
@@ -140,6 +168,7 @@ export default {
 
 		mounted() {
 			this.fetchSearchFields();
+			this.fetchHomeInfo();
 		}
 
 } 

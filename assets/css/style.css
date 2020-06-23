@@ -1482,3 +1482,13 @@ textarea.form-control {
     filter: "alpha(opacity=20)";
     -ms-filter: "alpha(opacity=20)";
 }
+
+.partners .item {
+  align-items: center;
+display: flex;
+margin: 0 auto;
+}
+
+.remove-top-padding {
+  padding-top:0;
+}

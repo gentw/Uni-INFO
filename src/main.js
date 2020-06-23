@@ -8,6 +8,8 @@ import App from './components/App.vue';
 
 import HomeComponent from './components/HomeComponent.vue';
 import AboutComponent from './components/AboutComponent.vue';
+import ContactComponent from './components/ContactComponent.vue';
+import HelpComponent from './components/HelpComponent.vue';
 
 Vue.use(Router);
 Vue.use(Resource);
@@ -24,6 +26,18 @@ var routes = [
       name: 'about',
       component: AboutComponent
     },
+
+    {
+      path: '/contact',
+      name: 'contact',
+      component: ContactComponent
+    },
+
+    {
+      path: '/help',
+      name: 'help',
+      component: HelpComponent
+    }
 
 
 ];
