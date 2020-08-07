@@ -357,6 +357,7 @@ background-position: center;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+  margin: 0 auto;
 }
 
 .top-destination .place:hover, .top-destination .place:focus {
@@ -1488,6 +1489,12 @@ textarea.form-control {
 display: flex;
 margin: 0 auto;
 }
+
+.spec-image-partner{
+  height: 250px;
+max-width: 130%!important;
+}
+
 
 .remove-top-padding {
   padding-top:0;
